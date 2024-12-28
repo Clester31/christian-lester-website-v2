@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --blue1: #031424;
+  --blue2: #031f2c;
+  --blue3: #183644;
+  --tan1: #ECB365;
+  --tan2: #eedabd;
+}
+
+body {
+  color: white;
+  background: var(--blue2);
+  font-family: 'Montserrat', Helvetica, sans-serif;
+}
+
+.name-text {
+  background: linear-gradient(135deg, var(--tan1) 0%, var(--tan2) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.component-container {
+  transition: opacity 0.5s ease-in;
+  opacity: 1;
+}
+
+.component-container.hidden {
+  opacity: 0;
+}
