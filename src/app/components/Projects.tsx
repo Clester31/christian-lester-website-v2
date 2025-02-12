@@ -9,7 +9,7 @@ export default function Projects() {
                 <h1 className="text-4xl font-semibold">My Projects</h1>
                 <p className="text-lg">Click on one of the projects below to try it out or see it&apos;s repository</p>
             </div>
-            <div className="project-display flex flex-row gap-8 justify-center mt-8">
+            <div className="project-display grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center mt-8">
                 {projectList.map((project, i) => {
                     return (
                         <ProjectBox
@@ -17,7 +17,7 @@ export default function Projects() {
                             image={project.image}
                             title={project.title}
                             desc={project.desc}
-                            repoLink={project.repoLink}
+                            repoLink={project.repoLink ?? null}
                             siteLink={project.siteLink}
                         />
                     )

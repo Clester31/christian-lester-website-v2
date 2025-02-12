@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-export default function ProjectBox({ image, title, desc, repoLink, siteLink }: { image: string, title: string, desc: string, repoLink: string, siteLink: string }) {
+export default function ProjectBox({ image, title, desc, repoLink, siteLink }: { image: string, title: string, desc: string, repoLink: string | null, siteLink: string }) {
     return (
-        <div className="flex flex-col justify-center text-center p-4 bg-blue1 w-1/5 rounded-xl items-center">
+        <div className="flex flex-col justify-center text-center p-4 bg-blue1 rounded-xl items-center">
             <img
                 className="rounded-xl my-4"
                 src={image}
@@ -13,7 +13,8 @@ export default function ProjectBox({ image, title, desc, repoLink, siteLink }: {
             <div className="flex flex-row gap-4 justify-center my-8">
                 <a
                     className="bg-emerald-500 p-2 rounded-md text-black hover:text-white transition 200ms ease-in w-16"
-                    href={repoLink}
+                    style={{ display: repoLink ? 'block' : 'none' }}
+                    href={repoLink || undefined}
                 >
                     <i className="fa-brands fa-github text-3xl"></i>
                 </a>

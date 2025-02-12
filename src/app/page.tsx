@@ -11,7 +11,7 @@ export default function Home() {
   const [currentTab, setCurrentTab] = useState<number>(0);
   return (
     <div className="overflow-none">
-      <Navbar setCurrentTab={setCurrentTab} />
+      <Navbar currentTab={currentTab} setCurrentTab={setCurrentTab} />
       <div className="component-container">
         {
           currentTab === 0 &&

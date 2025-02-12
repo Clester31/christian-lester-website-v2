@@ -8,10 +8,23 @@ const projectList = [
     },
     {
         image: './project_pictures/albumReview.png',
-        title: 'Album Review Site',
+        title: 'MyMusicCatalog',
         desc: 'Rate and review your favorite albums/EPs',
-        repoLink: 'https://github.com/Clester31/album-review-site',
-        siteLink: 'https://clester31.github.io/album-review-site/'
+        repoLink: 'https://github.com/Clester31/MyMusicCatalog',
+        siteLink: 'https://github.com/Clester31/MyMusicCatalog'
+    },
+    {
+        image: './project_pictures/mindMap.png',
+        title: 'MindMap For Future Envisioning',
+        desc: 'Node-based goal planning tool for planning re-entry to society for returning citizens',
+        siteLink: 'https://clester31.github.io/PR-MindMap-React/'
+    },
+    {
+        image: './project_pictures/sidechain.png',
+        title: 'Sidechain - Music Feedback Website',
+        desc: 'A website for musicians to get feedback on their music',
+        repoLink: 'https://github.com/Clester31/sidechain-project',
+        siteLink: 'https://sidechain-project-4cqy.vercel.app/'
     },
     {
         image: './project_pictures/tf2Crate.png',
