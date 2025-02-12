@@ -1,6 +1,4 @@
-import { useState } from "react";
-
-export default function Navbar({ currentTab, setCurrentTab }: { currentTab: number; setCurrentTab: (tab: number) => void }) {
+export default function Navbar({ currentTab, setCurrentTab }: { currentTab: number; setCurrentTab: (tab: number | ((prev: number) => number)) => void }) {
     const hoverStyle = `hover:text-tan1 transition 150 ease-in cursor-pointer`
     const tabs = ['About me', 'Projects', 'Experience', 'Extras'];
 
@@ -33,9 +31,9 @@ export default function Navbar({ currentTab, setCurrentTab }: { currentTab: numb
                 </li>
             </ul>
             <div className="lg:hidden flex flex-row gap-8">
-                <i onClick={() => setCurrentTab((prev) => Math.max(0, prev - 1))} className="fa-solid fa-left-long text-3xl"></i>
+                <i onClick={() => setCurrentTab((prev: number) => Math.max(0, prev - 1))} className="fa-solid fa-left-long text-3xl"></i>
                 <h1>{tabs[currentTab]}</h1>
-                <i onClick={() => setCurrentTab((prev) => Math.min(3, prev + 1))} className="fa-solid fa-right-long text-3xl"></i>
+                <i onClick={() => setCurrentTab((prev: number) => Math.min(3, prev + 1))} className="fa-solid fa-right-long text-3xl"></i>
             </div>
         </div>
 
